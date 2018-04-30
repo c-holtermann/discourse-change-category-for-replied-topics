@@ -47,7 +47,7 @@ end
 after_initialize do
   module ::ChangeCategoryRepliedTopics
     class ChangeCategoryRepliedTopicsJob < ::Jobs::Scheduled
-      every 1.day
+      every 1.hour
 
       def execute(args)
         ChangeCategoryRepliedTopics.change_replied_topics!
